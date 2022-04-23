@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Fira Code', monospace;
+}
+section:nth-child(1) > h1,
+section:nth-child(8) > h1{
+    color: white;
+    transform: skew(0,12deg);
+    font-size: 10em;
+    text-shadow:
+    -1px 1px 0px #ffffff,
+    -3px 3px 0px #ffffff,
+    -5px 5px 0px #ffffff,
+    -7px 7px 0px #ffffff,
+    -9px 9px 0px #ffffff,
+    -11px 11px 0px #ffffff;
+}
+::selection { 
+    color: rgb(44, 44, 44);
+    background: rgb(255, 255, 255);
+  }
+.wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #111111;
+}
+.section-wrap{
+    width: 100%;
+}
+section{
+    scroll-snap-align: start;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#name{
+    padding: 10px 0;
+    color: #e6e6e6;
+}
+#ocupation{
+    padding-bottom: 10px;
+    font-size: 60px;
+    background: -webkit-linear-gradient(90deg, #5471ff 0%, #581697 100%);;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+#aboutme{
+    color: rgb(236, 236, 236);
+    font-size: 1.2rem;
+}
+#self{
+    width: 150px;
+    border-radius: 20px;
+}
+.john > div{
+    width: 70%;
+    height: 80%;
+}
+.tile{
+    position: relative;
+    width: 70%;
+    height: 80%;
+    border: 3px solid whitesmoke;
+    border-radius: 20px;
+    color: white;
+    background: #111111;
+    transition: .5s ease-in-out;
+    padding: 20px;
+}
+.tile >h3{
+    color: #ffffff6e;
+}
+.tile > h1 {
+    padding: 0 10px;
+    font-size: 60px;
+    background: #00627a;
+    display: inline;
+    margin: 10px 0;
+    color: #e6e6e6;
+}
+.tile >p{
+    width: 50%;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.tile > a{
+    position: absolute;
+    bottom: 20px;
+    text-decoration: none;
+    padding: 10px 30px; 
+    border-radius: 10px;
+    border: 3px solid whitesmoke;
+    color: whitesmoke;
+    transition: .5s ease-in-out;
+    font-size: 20px;
+    
+}
+.tile > a:hover{
+    background: whitesmoke;
+    color: black;
+}
+.tile:hover{
+    filter: drop-shadow(0 0 1.5rem #ff30ff);
+}
+section:nth-child(3){
+    height:50vh ;
+}
+section:nth-child(6){
+    height:40vh ;
+}
+
+section:nth-child(7){
+    height:30vh;
+}
+section:nth-child(7) >div{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    transition: .5s ease-in-out;
+}
+
+section:nth-child(7) >div>div{
+    
+    border-radius: 20px;
+    padding: 20px;
+    background-color: rgba(233, 233, 233, 0.5);
+
+}
+.heading{
+    transition: .5s ease-in-out;
+    font-size: 40px;
+    color: white;
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+
+#social{
+  
+}

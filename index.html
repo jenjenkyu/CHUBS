@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="section-wrap">
+            <section id="chubs">
+                <h1>CHUBS</h1>
+            </section>
+            <section class="john">
+                <div>
+                    <img id="self" src="me2.jpg" alt="">
+                    <h2 id="name">JOHN HENRICKS</h2>
+                    <h1 id="ocupation">WEB DESIGNER</h1>
+                    <p id="aboutme">Im an IT student at LSPU - SPCC, my hubbies are watching movies and sometimes create someting on the web, i loved learing new stuff 
+                        even though sometimes i can't understand what is my goal is.
+                    </p>    
+                </div>  
+            </section>
+            <section>
+                <div class="heading" id="prj-head">
+                    <h1>PROJECT</h1>
+                </div>    
+            </section>
+            <section>
+                <div id="div-1" class="tile">
+                    <h3>Application</h3>
+                    <h1>TOH</h1>
+                    <p>TOH, A program to solve for the steps in Tower Of Hanoi</p>
+                    <a href="https://github.com/jenjenkyu/recursion.TOH">VISIT</a>
+                </div>
+            </section>
+            <section> 
+                <div id="div-2" class="tile">
+                <h3>Application</h3>
+                <h1>Calculator</h1>
+                <p>My first program on python that is published</p>
+                <a href="https://github.com/jenjenkyu/simple-python-calc">VISIT</a>
+            </div>
+        </section>
+        <section>
+            <div class="heading" id="social">
+                <h1>SOCIAL</h1>
+            </div>    
+        </section>
+        <section>
+            <div id="div-3"  >
+                <div>
+                <a href="https://github.com/jenjenkyu" target="_blank"><img src="github.png" alt="github" width="100px" height="100px"></a>
+                <a href="https://www.facebook.com/jenjenhood1/" target="_blank" ><img src="facebook.png" alt="facebook" width="100px" height="100px"></a>
+                <a href="https://www.instagram.com/jenjenkyu/" target="_blank"><img src="instagram.png" alt="instagram" width="100px" height="100px"></a>
+                <a href="https://codepen.io/jenjenkyu" target="_blank"><img src="codepen.png" alt="codepen" width="100px" height="100px"></a>
+                </div>
+                
+            </div>
+        </section>
+        <section id="chubs">
+            <h1>THANKS!!!</h1>
+        </section>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        
+    const vh = 0.5*document.documentElement.clientHeight;
+    const scl =document.getElementById("social");
+    const chubs = document.getElementById("chubs");
+    const prjh =document.getElementById("prj-head");
+    const divc1 =document.getElementById("div-1");
+    const divc2 =document.getElementById("div-2");
+    const divc3 =document.getElementById("div-3");
+    document.addEventListener("scroll",()=>{
+    const sclt =document.getElementById("social").getBoundingClientRect().top;
+    const sclb =document.getElementById("social").getBoundingClientRect().bottom;
+    const chubs1 = document.getElementById("chubs").getBoundingClientRect().bottom;
+    const prjb = document.getElementById("prj-head").getBoundingClientRect().bottom;
+    const prjt = document.getElementById("prj-head").getBoundingClientRect().top;
+    const div1 = document.getElementById("div-1").getBoundingClientRect().bottom;
+    const div2 = document.getElementById("div-2").getBoundingClientRect().bottom;
+    const div3 = document.getElementById("div-3").getBoundingClientRect().bottom;
+    const divt1 = document.getElementById("div-1").getBoundingClientRect().top;
+    const divt2 = document.getElementById("div-2").getBoundingClientRect().top;
+    const divt3 = document.getElementById("div-3").getBoundingClientRect().top;
+    if(div1>=vh && div1>0 &&divt1<vh){
+        divc1.style.opacity="1";
+    }else if(div2>=vh && div2>0 &&divt2<vh){
+        divc2.style.opacity="1";
+    }else if(div3>=vh && div3>0 &&divt3<vh){
+        divc3.style.opacity="1";
+    }else if(prjb>=vh && prjb>0 &&prjt<vh){
+        prjh.style.opacity="1";
+    }else if(sclb>=vh && sclb>0 &&sclt<vh){
+        scl.style.opacity="1";
+    }else if(chubs1>=vh+0.1*document.documentElement.clientHeight){
+        chubs.style.transition=".5s ease-in-out";
+        chubs.style.opacity="1";
+    }else{
+        scl.style.opacity=".5";
+        chubs.style.opacity=".5";
+        prjh.style.opacity="0.5";
+        divc1.style.opacity="0.5";
+        divc2.style.opacity="0.5";
+        divc3.style.opacity="0.5";
+    }
+    })
+    </script>
+</body>
+</html>
